@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar alumno</title>
+    <link rel="icon" type="image/png" href="cbtis 258.jfif">
+    <link rel="stylesheet" href="cssbuscar.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand">
+                <img src="cbtis 258.jfif" alt="Logo CBTis 258">
+                <div>
+                    <span class="eyebrow">Plantel educativo</span>
+                    <h1>CBTis 258</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="hero">
+                <p class="tag">Sistema escolar</p>
+                <h2>Consultar alumno</h2>
+                <p class="subtitle">Busca la información del estudiante por matrícula para revisar o actualizar su registro.</p>
+            </section>
+
+            <section class="search-panel">
+                <form class="formulario-busqueda" method="post" action="buscar.php">
+                    <label for="matricula">Nombre del alumno:</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ingrese el nombre del alumno"
+                    >
+
+                    <label for="matricula">Matrícula:</label>
+                    <input
+                        type="text"
+                        id="matricula"
+                        name="matricula"
+                        placeholder="Ingrese la matrícula del alumno"
+                    >
+
+                    <div class="botones">
+                        <a href="datos del alumno.html" class="btn-buscar">Consultar</a>
+                        <a href="Inicio.html" class="btn-volver">Volver al inicio</a>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
