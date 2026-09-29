@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte</title>
+    <link rel="icon" type="image/png" href="cbtis 258.jfif">
+    <link rel="stylesheet" href="reporte.css">
+</head>
+<body>
+    <img class="logo-superior-izquierdo" src="cbtis 258.jfif" alt="Logo DGETI">
+    <button class="boton-imprimir" type="button" onclick="window.print()">IMPRIMIR</button>
+    <a href="Inicio.html" class="boton-volver">VOLVER AL INICIO</a>
+
+    <main class="contenedor-reporte">
+        <form class="formulario-reporte" action="#" method="post">
+            <div class="campo campo-nombre">
+                <label for="nombre-alumno">NOMBRE DEL ALUMNO:</label>
+                <input id="nombre-alumno" name="nombre-alumno" type="text" required>
+            </div>
+
+            <div class="campo campo-motivo">
+                <label for="motivo">MOTIVO:</label>
+                <select id="motivo" name="motivo" required>
+                    <option value="" selected disabled></option>
+                    <option value="Salud">Salud</option>
+                    <option value="familiar">Temas familiares</option>
+                    <option value="academico">Situación académica</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="campo campo-especialidad">
+                <label for="especialidad">ESPECIALIDAD:</label>
+                <select id="especialidad" name="especialidad" required>
+                    <option value="" selected disabled></option>
+                    <option value="programacion">Programación</option>
+                    <option value="contabilidad">Contabilidad</option>
+                    <option value="Laboratorio clínico">Laboratorio clínico</option>
+                    <option value="Mecánica industrial">Mecánica industrial</option>
+                     <option value="Preparación de alimentos y bebidas">Preparación de alimentos y bebidas</option>
+                     <option value="S.M.E.C">S.M.E.C</option>
+                </select>
+            </div>
+
+            <div class="campo campo-grupo">
+                <label for="grupo">GRUPO:</label>
+                <input id="grupo" name="grupo" type="text" required>
+            </div>
+
+            <div class="campo campo-hora">
+                <label for="hora">HORA:</label>
+                <input id="hora" name="hora" type="time" required>
+            </div>
+            <div class="campo campo-fecha">
+                <label for="fecha">FECHA:</label>
+                <input id="fecha" name="fecha" type="date" required>
+            </div>
+        </form>
+
+        <footer class="firmas">
+            <div class="firma">FIRMA DE PADRE/MADRE O TUTOR</div>
+            <div class="firma">FIRMA DEL INSTITUTO</div>
+        </footer>
+    </main>
+</body>
+</html>

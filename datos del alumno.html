@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Alumno</title>
+    <link rel="icon" type="image/png" href="cbtis 258.jfif">
+    <link rel="stylesheet" href="datos.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <div class="brand">
+                <img src="cbtis 258.jfif" alt="Logo CBTis 258">
+                <div>
+                    <span class="eyebrow">Plantel educativo</span>
+                    <h1>CBTis 258</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="hero">
+                <p class="tag">Sistema escolar</p>
+                <h2>Datos del alumno</h2>
+                <p class="subtitle">Registra la información del estudiante para generar el justificante de salida.</p>
+            </section>
+
+            <section class="form-panel">
+                <div class="contenedor">
+                    <h3>DATOS DEL ALUMNO</h3>
+                    <div class="linea"></div>
+                    <div class="dato nombre">
+                        <label>NOMBRE DEL ALUMNO</label>
+                        <input type="text">
+                    </div>
+                    <div class="dato especialidad">
+                        <label>ESPECIALIDAD</label>
+                        <input type="text">
+                    </div>
+                    <div class="dato semestre">
+                        <label>SEMESTRE Y GRUPO</label>
+                        <input type="text">
+                    </div>
+                    <div class="dato semestre">
+                        <label>TURNO</label>
+                        <input type="text">
+                    </div>
+                    <div class="credenciales">
+                        <p>Credencial(es) de<br>persona autorizada</p>
+                        <div class="fotos">
+                            <img class="ine-img" src="ine xd.png" alt="INE 1">
+                            <img class="ine-img" src="ine xd.png" alt="INE 2">
+                            <img class="ine-img" src="ine xd.png" alt="INE 3">
+                            <img class="ine-img" src="ine xd.png" alt="INE 4">
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <a href="actualizar datos.html" class="btn-guardar" aria-label="Actualizar datos">Actualizar Datos</a>
+                        <a href="Reporte.html" class="btn-guardar" aria-label="Crear justificante de salida">Crear Justificante de Salida</a>
+                        <a href="Inicio.html" class="btn-volver" aria-label="Volver al inicio">VOLVER AL INICIO</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="modal" id="modalIne" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" type="button" aria-label="Cerrar vista previa">×</button>
+            <img id="modalImage" src="" alt="Vista previa de INE">
+        </div>
+    </div>
+
+    <!-- script -->
+    <script>
+        const modal = document.getElementById('modalIne');
+        const modalImage = document.getElementById('modalImage');
+        const closeButton = document.querySelector('.modal-close');
+        const ineImages = document.querySelectorAll('.ine-img');
+
+        ineImages.forEach((img) => {
+            img.addEventListener('click', () => {
+                modalImage.src = img.src;
+                modalImage.alt = img.alt;
+                modal.classList.add('show');
+                modal.setAttribute('aria-hidden', 'false');
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.remove('show');
+            modal.setAttribute('aria-hidden', 'true');
+        };
+
+        closeButton.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && modal.classList.contains('show')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
